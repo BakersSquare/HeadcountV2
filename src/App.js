@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        Dude no way
+        Headcount with Authentication
       </header>
 
       <section >
@@ -46,7 +46,14 @@ function App() {
 function HeadcountUI(){
 
   return(
+    <div>
+      
     <header>Signed in!</header>
+    <body>Each state returns an HTML element. You can make these more complex by wrapping the entire thing inside a div. Not to mention the CSS that can be applied.
+
+    </body>
+    <button onClick={() => auth.signOut()}>Sign Out</button>
+    </div>
   )
 }
 
@@ -62,7 +69,7 @@ function SignIn(){
 
 function SignOut() {
   return auth.currentUser && (
-    <button onClick={() => auth.SignOut()}>Sign Out</button>
+    <button onClick={() => auth.signOut()}>Sign Out</button>
   )
 }
 
