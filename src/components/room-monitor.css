@@ -1,0 +1,45 @@
+.room-monitor-clear {
+    background: rgb(5, 140, 173);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    clear: both;
+    color: rgb(252, 252, 252);
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    height: auto;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    text-align: center;
+    width: auto;
+    word-wrap: break-word;
+}
+
+.room-monitor-full {
+    background: rgb(243, 9, 9);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    clear: both;
+    color: rgb(252, 252, 252);
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    height: auto;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    text-align: center;
+    width: auto;
+    word-wrap: break-word;
+}

@@ -1,0 +1,33 @@
+.monitor-bank {
+    display: flex;
+    flex-direction: column;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+}
+
+.map-upload {
+    background: rgb(202, 40, 40);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    max-height: 75px;
+    width: auto;
+}
+
+.reset-img-button {
+    background: rgb(243, 9, 9);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100px;
+}

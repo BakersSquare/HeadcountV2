@@ -1,0 +1,46 @@
+.config-entry {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.config-button {
+    background: rgb(15, 250, 27);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 50px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    text-align: center;
+    width: 100px;
+}
+
+.config-region {
+    background: rgb(5, 140, 173);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    clear: both;
+    color: rgb(252, 252, 252);
+    display: flex;
+    flex-direction: column;
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    height: auto;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    max-height: 225px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    text-align: center;
+    width: auto;
+    word-wrap: break-word;
+}

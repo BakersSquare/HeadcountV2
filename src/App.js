@@ -1,4 +1,5 @@
 import './App.css';
+import { HeadcountUI } from "./components/HeadcountUI";
 
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
@@ -26,6 +27,7 @@ const firestore = firebase.firestore();
 
 function App() {
 
+  //If user is logged in, user is an object w an id, email address, other info, etc.
   const [user] = useAuthState(auth);
 
   return (
@@ -35,7 +37,7 @@ function App() {
       </header>
 
       <section >
-        {user ? <HeadcountUI /> : <SignIn />}
+        {user ? <SignedIn /> : <SignedOut />}
         {/* if user != null, display the UI. if user == null, they haven't signed in*/}
       </section>
 
@@ -43,21 +45,28 @@ function App() {
   );
 }
 
-function HeadcountUI(){
+function SignedIn(){
+
+  const countsReference = firestore.collection('counts');
+
+  const query = countsReference;
+  const [roomCounts] = useCollectionData(query, {idField: 'id'});
 
   return(
     <div>
       
+    <HeadcountUI />
     <header>Signed in!</header>
-    <body>Each state returns an HTML element. You can make these more complex by wrapping the entire thing inside a div. Not to mention the CSS that can be applied.
 
-    </body>
+    <div>
+      {roomCounts && roomCounts.map(room => <roomCount key={room.id} text={room} />)}
+    </div>
     <button onClick={() => auth.signOut()}>Sign Out</button>
     </div>
   )
 }
 
-function SignIn(){
+function SignedOut(){
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
@@ -65,6 +74,12 @@ function SignIn(){
   return(
     <button onClick={signInWithGoogle}>Sign in with Google</button>
   )
+}
+
+function roomCount(props){
+  const {text} = props.text;
+
+  return <p>{text}</p>
 }
 
 function SignOut() {
